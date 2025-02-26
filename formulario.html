@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+</head>
+
+
+
+<body>
+
+    <h1>Formulario</h1>
+
+    <p>
+
+        Sempre que formos utilizarmos os formularios eles iram começar com a tag
+        <mark><b>&lt;form&gt;&lt;/form&gt;</b></mark> de formulario, e dentro dessa tag que seria a tag pai, ou seja,
+        que é o formulario em si que sera enviado, mas lembre-se, sempre que formos utilizar a tag &lt;form&gt;&lt; será
+        apena uma vez, todo o resto que formos adicionar ao nosso formulario tem que estar dentro dessa tag unica, caso
+        contrario ela noa funcionarar conrretamente. Existem os itens que iram formar esse formulario, entre eles esta o
+        <mark><b>&lt;input&gt;</b></mark>, que quer dizer entrada, algo que enviara um dado de entrada, esse input tem
+        varios tipo, ou <mark><b>Type</b></mark>, o primeiro que vamos ver é o atributo <mark><b>TypeText</b></mark> ou
+        seja, uma entrada do tipo de texto, isso ira abrir um campinho digitavel para nossos ususario e ficara da
+        seguinte forma: <mark><b>&lt;form&gt;&lt;input <i>type</i>="text"&gt;&lt;/form&gt;</b></mark>
+
+        <br>
+
+        Resultando em...
+
+        <br><br>
+
+    <form>
+
+        <input type="text">
+
+
+        <br>
+
+        Esse é atualmente o campo mais comum qu nos utilizamos, o campo input do tipo texto.
+
+        <br><br>
+
+        Temos uma outra propridade dentro do campo do tipo texto que é o <mark><b>placeholder</b></mark> por exemplo:
+
+        <br><br>
+
+        &lt;form&gt;&lt;input <i>type</i>="text" <i>placeholder</i>="Digite seu nome aqui"&gt;&lt;/form&gt;
+
+        <br><br>
+
+        E esse codigo resultaria em:
+
+        <br><br>
+
+
+
+        <label for="campo_nome">Nome:</label>
+        <input id="campo_nome" type="text" placeholder="Digite seu nome aqui" required><br><br>
+
+
+
+
+        <br><br>
+
+        Outra tag que utilizamos bastante são as legendas, que são mais conhecidas como <mark><b>Label</b></mark>, que é
+        uma
+        legendinha que serve para dizer para o que serve aquele campo, ou seja, a palavra "nome" antes do campo "digite
+        seu
+        nome"
+
+        A tag <mark><b>Label </b></mark> tem um recurso de que quando o usuaro cicar na legende ela ja vai
+        automotacamente
+        para o campo de digitar o nome, bastar irmos ate a parte do <mark><b>Input</b></mark> do nosso codigo e
+        adicionarmos
+        a seguinte propriedade: <i>id</i>="campo_nome" e no <mark><b>Label</b></mark> adicionaremos uma propriedade
+        <mark><b>form</b></mark>, dessa forma, caso nosso usuario clique na legenda do nosso campo, ou seja, "Nome", ele
+        sera direcionado automatiamente para o campo do Nome.
+
+        <br><br>
+
+
+
+        <label for="campo_sobrenome">Sobrenome:</label><input id="campo_sobrenome" type="text"
+            placeholder="Digite seu  sobrenome aqui" required>
+
+
+
+        <br><br>
+
+        Alem desse tipo de campo temos o tipo de campo senha, esse campo ele funciona da seguinte forma, esse campo
+        tambem é
+        uma tag <mark><b>Input</b></mark> porem o tipo dele é password, ou, senha em portugues, no nosso codigo ficaria
+        da
+        seguinte forma:
+
+        <br><br>
+
+        &lt;input <i>id</i>="campo_senha" <i>Type</i>="password" placeholder="Digite sua senha"&gt;
+
+        <br>
+
+
+
+        <label for="campo_senha">Digite sua senha:</label> </label><input id="campo_senha" type="password" required
+            placeholder="Digite sua senha">
+
+
+
+        <br><br>
+
+        Outro que utilizamos muito é o do tipo e-mail, esse campo é <mark><b>Input</b></mark> tambem porem com o
+        <mark><b>type</b></mark> email, esse campo ele reconhece quando o usuario esta digitando um e-mail ou não, o
+        navegador so ira aceitar oque estiver escrito no campo como um email caso possua um <mark><b>@</b></mark> e um
+        <mark><b>.</b></mark>, caso contrario o navegador nao ira reconhecer como um e-mail valido.
+
+        <br>
+
+        Essa tag ficaria da seguinte forma:
+
+        <br><br>
+
+
+
+        <label for="campo_email">Digite seu e-mail:</label><input required id="campo_email" type="email"
+            placeholder="Digite sue email">
+
+
+
+        <br><br>
+
+        Outro campo <mark><b>Input</b></mark> que vamos estar aprendendo é do <i>type</i> submit, que significa enviar
+        em
+        portugues, para escrevermos o nome desse submit bastar adicionarmos <i>value</i>="enviar formulario", esse tipo
+        submit é um botão para quando nosso usuario clicar nele o formulario, na pagina ficaria da seguinte forma:
+
+        <br><br>
+
+        &lt;input <i>type</i>="submit" <i>value</i>="Enviar formulario"&gt;
+
+        <br><br>
+
+
+
+        <input type="submit" value="Enviar formulario">
+
+
+        <br><br>
+
+        Existe um atributo para efitar que nossos usuarios enviem o formulario vazio, para isso bastar adicionarmos ao
+        campo
+        <mark>
+            <b>Input</b>
+        </mark> o atributo <i>required</i> nos campos do tipo <mark><b>Input</b></mark>
+
+        <br><br>
+
+        Temos outro Type do Input que seria o "Radio", esse radio na nossa pagina web seria aquelas bolinhas que aparece
+        paranossos usuarios selecionar apenas um item de varias opção, em nosso codigo adicionariamos a tag
+        &lt;h2&gt;Animal de estimação (por exemplo), e alem disso devemos dar um <i>name</i> e esse nome tem que ser
+        sempre igual para todos os campos radio que teremos, ou seja, suponhando que o nome do nosso "radio" seja
+        animal, nossa tag ficaria a seguinte:
+
+        <br><br>
+
+        &lt;h2&gt;Animal de estimação&lt;/h2&gt;&lt;input&gt; <i>type</i>="radio" <i>name</i>="animal"
+        <i>value</i>="Cachorro<br><br>" e até o momento nao vai aparecer nada na nossa pagina web, a bolinha que aparece
+        no navegador tem o valor de cachorro no formulario, porem nao apareceu anda escrito pelo fato de percisarmos
+        adicionarmos a tag <i>id</i>="dog" podemos colcoar o nome que quisessemor dentro do id, coloquei dog para
+        diferenciar um pouco. Após isso colocamos o seguinte comando: &lt;label
+        <i>for</i>="dog"&gt;Cachorro&lt;/label&gt; depois disso é recomendado que pulassemos 2 linhas utilizando a tag
+        &lt;br&gt;&lt;br&gt; isso tudo ficaria assim:
+
+        <br><br>
+
+        <h2>Animal de estimação</h2>
+        <input type="radio" id="dog" name="animal" value="Cachorro">
+        <label for="dog">Cachorro</label>
+
+        <br>
+
+        <input type="radio" id="cat" name="animal" value="gato">
+        <label for="cat">Gato</label>
+
+        <br>
+
+        <input type="radio" id="bird" name="animal" value="passario">
+        <label for="bird">Passarinho</label>
+
+        <br><br>
+
+        feito isso teremos um total de 3 opções para escolhermos 1, isso acontece pelo fato do <i>name</i> ser o mesmo,
+        ou seja, animal, com isso o navegador entende que todos eles fazem parte do mesmo conjunto, só oque vamos trocar
+        seria o <i>value</i> que é oque vai ser mandando para o formulario. Resumindo, o <i>radio</i> é a opção aonde o
+        usuario so pode escolher uma das opções, no campo <mark><b>Input</b></mark> do <i>type</i>="radio" somos
+        obrigados a adicionar o atributo name etem que ser igual para todos que vao fazer parte das opções disponiveis,
+        e so oque alteramos seria o <i>Value</i> que é o valor que vai aparecer e esse valor não vai aparecer para o
+        usuario, vai ser para o formulario que será enviado, entao é importante colocar o &lt;label <i>for</i> para que
+        do lado apareça uma opção escrita e no <i>for</i> devemos sempre apontar para o campo <i>id</i> que queremos
+        para que dessa forma nossos usuarios possam clicar apenas no texto e automaticamente ja seleciona a bolinha.
+
+        <br><br>
+
+        Caso quissesemos dar varias opções para nossos usuario bastar utilizarmos o Input do tipo checkbox, no caso do
+        "checkbox" nos não teremos os mesmos "name" para todos, cada um será unico, a seguir vamos dar um exemplo, vamor
+        fazer com se fosse uma pergunta utilizando a tag de titulo &lt;h2&gt;&lt;/h2&gt;, vamos ver alguns exemplos:
+
+        <br><br>
+
+        &lt;h2&gt;Oque você tem em casa?&lt;/h2&gt;
+
+        <br><br>
+
+        &lt;input <i>type</i>="checkbox" &lt;input <i>id</i>="item1" <i>type</i>="checkbox"&gt; <i>name</i>="item1"
+        <i>value</i>="tv" &lt;label <i>for</i>="item1"&gt;tv&lt;/label&gt;&lt;/label&gt;&lt;br&gt;&lt;&lt;br&gt;
+
+        <br><br>
+
+        &lt;input <i>type</i>="checkbox" &lt;input <i>id</i>="item2" <i>type</i>="checkbox"&gt; <i>name</i>="item2"
+        <i>value</i>="geladeira" &lt;label
+        <i>for</i>="item1"&gt;geladeira&lt;/label&gt;&lt;/label&gt;&lt;br&gt;&lt;&lt;br&gt;
+
+        <br><br>
+
+        &lt;input <i>type</i>="checkbox" &lt;input <i>id</i>="item3" <i>type</i>="checkbox"&gt; <i>name</i>="item3"
+        <i>value</i>="computador" &lt;label
+        <i>for</i>="item3"&gt;computador&lt;/label&gt;&lt;/label&gt;&lt;br&gt;&lt;&lt;br&gt;
+
+
+        <br><br>
+
+        O resultado desse codigo é:
+
+        <br><br>
+
+        <h2>O que você tem em casa?</h2>
+
+        <br>
+
+        <input id="item1" type="checkbox" name="item1" value="tv"><label for="item1">TV</label>
+
+        <br><br>
+
+        <input id="item2" type="checkbox" name="item2" value="geladeira"><label for="item2">Geladeira</label>
+
+        <br><br>
+
+        <input id="item3" type="checkbox" name="item3" value="computador"><label for="item3">Computador</label>
+
+        <br><br>
+
+        Outro campo que utilizamos em formulario é o <i>select</i>, o select funciona com abertura e fechamento, e
+        dentro dele temos as <i>option</i> e dentro das <i>option</i> a gente sempre passa a propriedade <i>value</i>
+        que tem o valor que realmente vai ser enviado pelo formulario e entre a abertura e fechamento da tag é aonde
+        colocaremos oque vai estar escrito para nossos usuarios, veja o exemplo a seguir:
+
+        <br><br>
+
+        &lt;h2&gt;Escolha uma cor:&lt;/h2&gt;
+
+        <br><br>
+
+        &lt;select&gt;&lt;option<i>value</i>="vermelho"&lt;/option&gt;&lt;/select&gt;
+
+        <br><br>
+
+        O resultado do nosso codigo ficaria:
+
+        <h2>Escolha uma cor:</h2>
+
+        <select>
+
+            <option value="vermelho">Vermelho</option>
+            <option value="Azul">Azul</option>
+            <option value="Amarelo">Amarelo</option>
+            <option value="Verde">Verde</option>
+
+        </select>
+
+        <br><br>
+
+        Gerealmente nesse campo de selet a primeira opção que a gent equer colcoar e justamente uma opção que nao tenha
+        nada marcado, por exemplo para que o usuario selecione um cor ou algo do tipo, e para fazer isso e bem simples,
+        bastar pegar a primeira <i>option</i> colocamos o valor (value) vazio, apos isso vamos até o campo aonde seria o
+        nome que apareceria para o usuario e escrevemos "Selecione uma cor" e dentro do nosso <i>option</i> adicionamos
+        um <i>selected </i><i>disabled</i> ou seja, desabilitado e ficaria assim:
+
+        <br><br>
+
+        <h2>Escolha uma cor:</h2>
+
+        <select name="Cores">
+
+            <option selected disabled value="">Selecione uma cor</option>
+            <option value="vermelho">Vermelho</option>
+            <option value="Azul">Azul</option>
+            <option value="Amarelo">Amarelo</option>
+            <option value="Verde">Verde</option>
+
+        </select>
+
+        <br><br>
+
+        Outro campo que utilizamos muito e do tipo text area, que é um campo como se fosse aquele campo de texto mais a
+        cima, porem bem maior para os usuario utilizarem, ele pode até ser redimencionado pelos os usuarios, porem, caso
+        quisessemos que ele ficasse um tamanho fixo,utilizariamos propriedades como por exemplo <i>rows</i>="" que
+        significa linha em portugues e a propriedade <i>cols</i>="" que segnifica coluna em portugues, o campo livre
+        para o
+        usuario redimencionar como ele quisesse ficaria da seguinte forma:
+
+        <br><br>
+
+        &lt;h2&gt;Digite sua mensagem:&lt;/h2&gt;
+
+        <br>
+
+        &lt;textarea&gt;&lt;/textarea&gt;
+
+
+        <br><br>
+
+        <h2>Digite sua mensagem:</h2>
+
+        <textarea></textarea>
+
+        <br><br>
+
+        E o campo pré-determinado seria:
+
+        <br><br>
+
+        &lt;textarea <i>rows</i>="15" <i>cols="15"</i>&gt;&lt;/textarea&gt;
+
+        <br><br>
+
+        O resultado seria:
+
+        <br><br>
+
+        <textarea rows="15" cols="15"></textarea>
+
+        <br><br>
+
+        Alem disso tambem podemos usar aquela marca d'agua que aprendemos a utilizar anteriormente utilizando o
+        <i>placeholder</i>, o resultado fica da seguinte forma:
+
+        <br><br>
+
+        <textarea placeholder="Digite sue texto aqui" rows="15" cols="15"></textarea>
+
+
+    </form>
+
+    </p>
+
+    <p>
+
+        <br><br>
+
+    <h3>Conclusão</h3>
+
+    Os formulários são elementos essenciais para a interação entre usuários e páginas web, permitindo a coleta de
+    informações de maneira estruturada. Utilizando a tag &lt;form&gt;, conseguimos agrupar diversos tipos de campos de
+    entrada, como &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt;, entre outros. Cada um desses elementos possui
+    propriedades específicas, como type, placeholder, required, name, id, e value, que ajudam a definir seu
+    comportamento e a melhorar a experiência do usuário.
+
+    Além disso, a utilização de elementos como &lt;label&gt; e atributos como for torna os formulários mais acessíveis e
+    intuitivos, facilitando a navegação. Também aprendemos a diferença entre radio (para seleção única) e checkbox (para
+    múltiplas escolhas), além da importância do select para listas suspensas e do textarea para textos mais longos.
+
+    Com esses conhecimentos, conseguimos criar formulários eficientes e bem estruturados, garantindo uma comunicação
+    eficaz entre os usuários e o sistema.
+
+    <hr><br><br>
+
+    <a href="index (1).html">Voltar para a principal</a>
+
+    </p>
+
+</body>
+
+
+
+</html>

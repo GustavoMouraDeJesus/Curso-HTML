@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áudio</title>
+
+</head>
+
+<body>
+
+    <h1>Página de áudio</h1>
+
+    A tag de áudio se chama &lt;audio&gt;&lt;/audio&gt; e dentro dessa tag teremos uma tag filho que é a &lt;source&gt;
+    e dentro dela utilizamos o atributo <i>src</i> igual se fizessemos com imagens e deentro das aspas duplas colocamos
+    o caminho dee onde esta o nosso audio, pode ser um caminho relativo ou pode ser um caminho absoluto que significa
+    que pode ser um link ou pode sr um arquivo que temos dentro do nosso projeto e alem disso precisamos espesificar o
+    tipo do nosso arquivo, o tipo de arquivo do mp3 é do tipo <mark><b>áudio/mpeg</b></mark> e temos outro forma quee
+    vemos na internet que é o ponto <mark><b>ogg</b></mark> ao inves de <mark><b>mp3</b></mark> e no lugar de
+    <mark><b>mpeg</b></mark> usamos <mark><b>ogg</b></mark> e temos tambem o <mark><b>wav</b></mark> no lugar de
+    <mark><b>ogg</b></mark> e alem disso precisamos colcocar um atributo dentro de tag audio que seria o
+    <i>controls</i>, porem o <mark><b>mp3</b></mark> nao deixa de ser o mais utilizado nesse caso fica:
+
+    <br>
+
+    <img src="img/audio-1.jpg" width="30%">
+
+    <br><br>
+
+    E o reesultado é:
+
+    <br><br>
+
+    <audio controls>
+        <source src="audio/teste.mp3" type="audio/mpeg">
+    </audio>
+
+    <br><br>
+
+    É de grande utilização tambem um paragrafo de oque foi falado no audio, caso seja um conteudo falado, por exemplo em
+    blogs que costuma ter muito conteudo, geralmente se coloca essa tag de audio primeiro e depois um paragrafo com
+    exatamente o conteudo do audio.
+
+    <br><br>
+
+    A opção de fazer o dowload do audio na pagina web é padrão, mas caso seja de vontade do desenvolvedor que o usuario
+    do site baixe o arquivo do audio basta adicionarmos o seguinte atributo:
+
+    <br><br>
+
+    <img src="img/audio-2.jpg" width="30%">
+
+    <br><br>
+
+    <audio controls controlslist="nodownload">
+        <source src="audio/teste.mp3" type="audio/mpeg">
+    </audio>
+
+    <br><br>
+
+    Tambem podemos ao inves de utilizar um arquivo mp3 de dentro do nosso projeto, usar um link absoluto de audio,
+    lembrando que esse link para que ele funcione tem que terminar com <mark>.mp3</mark>.
+
+    <br><br>
+
+    Exemplo:
+
+    <br>
+
+    <img src="img/audio-3.jpg" width="30%">
+
+    <br><br>
+
+    Resultado:
+
+    <br><br>
+
+    <audio controls>
+        <source src="https://www.tuningmania.com.br/autosom/mp3/0-intro%20to%20test%20section.MP3" type="audio/mpeg">
+    </audio>
+
+
+    <br>
+
+
+    <h3>Conclusão</h3>
+
+    A tag &lt;audio&gt; é uma ferramenta essencial para incorporar arquivos de áudio em páginas web, permitindo que os
+    usuários ouçam conteúdos diretamente no navegador. Utilizando a tag &lt;source&gt;, podemos especificar diferentes
+    formatos de áudio, como MP3 (audio/mpeg), OGG (audio/ogg) e WAV (audio/wav), garantindo maior compatibilidade entre
+    navegadores.
+
+    Além disso, o atributo controls adiciona um player interativo para que os usuários possam reproduzir, pausar e
+    ajustar o volume do áudio. Caso seja necessário restringir o download do arquivo, podemos utilizar o atributo
+    controllist="nodownload". Também é possível fornecer o áudio por meio de links absolutos, desde que terminem em
+    <mark>.mp3</mark>.
+
+    Por fim, para tornar o conteúdo mais acessível, é recomendável incluir um parágrafo com a transcrição do áudio,
+    especialmente em blogs e sites informativos. Dessa forma, garantimos que todos os usuários possam consumir o
+    conteúdo, independentemente da forma como preferem acessá-lo.
+
+    <hr><br><br>
+
+    <a href="index (1).html">Voltar para a principal</a>
+
+</body>
+
+</html>
